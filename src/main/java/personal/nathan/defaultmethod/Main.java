@@ -18,7 +18,7 @@ public class Main {
         Named student = new Student();
         System.out.println(student.getName());
 
-        // Staff 继承了一个类，实现了一个类，类优先原则，不用实现该方法。
+        // Staff 继承了一个类，实现了一个接口，类优先原则，不用实现该方法。
         Staff staff = new Staff();
         System.out.println(staff.getName());
 

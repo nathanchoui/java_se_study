@@ -24,9 +24,9 @@ public class Main {
         */
 
         // lambda表达式方式
-//        Arrays.sort(arrays, (String first, String second)
-//                -> first.length() - second.length()
-//        );
+        Arrays.sort(arrays, (String first, String second)
+                -> first.length() - second.length()
+        );
 
         // 方法引用
         Arrays.sort(arrays, String::compareToIgnoreCase);
