@@ -1,7 +1,6 @@
 package personal.nathan.lambda;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 /**
  * Description:
@@ -24,15 +23,25 @@ public class Main {
         */
 
         // lambda表达式方式
-        Arrays.sort(arrays, (String first, String second)
+        // first和second是通过类型推倒出来的，必然是String
+        // BiFunction(T, U, R)
+        Arrays.sort(arrays, (first, second)
                 -> first.length() - second.length()
         );
 
         // 方法引用
-        Arrays.sort(arrays, String::compareToIgnoreCase);
+        //Arrays.sort(arrays, String::compareToIgnoreCase);
 
-        for (String name: arrays) {
-            System.out.println(name);
-        }
+        // Predicate
+        List<String> list = new ArrayList<>();
+        list.removeIf(e -> e == null);
+
+        // 分隔符:: 方法调用。
+        // object
+
+        System.out.println(Arrays.toString(arrays));
+
+
+
     }
 }
