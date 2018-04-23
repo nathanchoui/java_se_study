@@ -26,7 +26,7 @@ public class CountLongWords {
         }
         System.out.println(count);
 
-        // 使用流的方式
+        // 使用流的方式，此处用到了Predicate函数式编程
         count = words.parallelStream().filter(w -> w.length() > 12).count();
         System.out.println(count);
     }
