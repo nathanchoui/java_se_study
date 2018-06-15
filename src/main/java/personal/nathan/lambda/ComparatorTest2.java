@@ -17,6 +17,8 @@ public class ComparatorTest2 {
         System.out.println(Arrays.toString(persons));
 
 
+
+
     }
 
     public static Person[] makePersons() {
