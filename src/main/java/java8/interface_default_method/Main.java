@@ -1,4 +1,4 @@
-package personal.nathan.defaultmethod;
+package java8.interface_default_method;
 
 /**
  * Description:
@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // 测试接口默认方法，实现类并没有实现方法。
         // 默认调用接口的默认实现，并且实现类不覆盖接口方法也不会报错。
-        Named named = new NamedImpl();
+        Named named = new NamedNobody();
         System.out.println(named.getName()); // nathan, by default
 
         // Student 同时实现了 具有相同方法名和签名的接口

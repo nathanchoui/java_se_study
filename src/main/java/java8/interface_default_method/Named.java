@@ -1,4 +1,4 @@
-package personal.nathan.defaultmethod;
+package java8.interface_default_method;
 
 /**
  * Description:

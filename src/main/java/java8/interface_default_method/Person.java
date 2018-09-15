@@ -1,4 +1,4 @@
-package personal.nathan.defaultmethod;
+package java8.interface_default_method;
 
 /**
  * Description:
@@ -8,6 +8,6 @@ package personal.nathan.defaultmethod;
 public interface Person {
 
     default String getName() {
-        return "Person";
+        return "person, by default";
     }
 }

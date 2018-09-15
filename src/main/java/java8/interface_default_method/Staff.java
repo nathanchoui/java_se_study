@@ -1,4 +1,4 @@
-package personal.nathan.defaultmethod;
+package java8.interface_default_method;
 
 /**
  * Description:
@@ -6,6 +6,5 @@ package personal.nathan.defaultmethod;
  * Created by zhangwei on 2017/12/2.
  */
 public class Staff extends NamedPerson implements Named {
-
 
 }
