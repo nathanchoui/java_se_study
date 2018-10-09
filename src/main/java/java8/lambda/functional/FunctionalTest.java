@@ -10,35 +10,18 @@ import java.util.function.*;
  */
 public class FunctionalTest {
 
-    /**
-     * accept 方法接收代码块
-     * @param n
-     * @param consumer
-     */
     public static void consume(int n, Consumer<Integer> consumer) {
         for (int i = 0; i < n; i ++) {
             consumer.accept(i);
         }
     }
 
-    /**
-     * 用到了Consumer的 andThen方法
-     *
-     * @param n
-     * @param before 先执行的代码块
-     * @param after 后执行的代码块
-     */
     public static void consumeAndThen(int n, Consumer<Integer> before, Consumer<Integer> after) {
         for (int i = 0; i < n; i ++) {
             before.andThen(after).accept(i);
         }
     }
 
-    /**
-     * get方法获取代码块
-     *
-     * @param supplier
-     */
     public static void supply(Supplier<String> supplier) {
         System.out.println("supply a string: " + supplier.get());
     }
@@ -74,8 +57,5 @@ public class FunctionalTest {
         System.out.println();
         System.out.println("============ " + str + " ============");
     }
-
-
-
 
 }
