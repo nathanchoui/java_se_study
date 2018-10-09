@@ -1,9 +1,14 @@
 package java8.stream;
 
 import java8.stream.domain.Artist;
+import java8.stream.domain.Track;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by za-zhangwei002 on 2018/10/8.
@@ -41,5 +46,27 @@ public class StreamStudy {
         }).count();
 
         System.out.println("Italian artists'amount: " + count);
+
+
+        List<String> collected = Stream.of("a", "b", "c") // 返回一个Stream对象
+                .collect(Collectors.toList()); // 将Stream转换成一个List
+
+        collected.forEach(System.out::println);
+
+        List<Track> tracks = Arrays.asList(new Track("Bakai", 524),
+                new Track("Violets for Your Furs", 378),
+                new Track("Time Was", 451));
+        Track shortestTrack = tracks.stream()
+                .min(Comparator.comparing(track -> track.getLength()))
+                .get();
+        System.out.println(shortestTrack.toString());
+
+
+        int cnt = Stream.of(1, 2, 3)
+                // 第一个参数identity初始化为0
+                // 第二个参数是BinaryOperator<T> accumulator,顾名思义是累加器
+                // acc + element 返回一个新的acc
+                .reduce(0, (acc, element) -> acc + element);
+        System.out.println(cnt);
     }
 }
