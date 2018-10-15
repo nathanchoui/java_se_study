@@ -1,6 +1,7 @@
 package java8.stream.exercise;
 
 import java8.stream.domain.Artist;
+import java8.stream.domain.Track;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.stream.Stream;
  * <p>
  * Created by nathan.z on 2018/10/9.
  */
-public class StreamExerciseA {
+public class StreamExercise1 {
 
     // 编写一个求和函数， 计算流中所有数之和。例如，int addUp(Stream<Integer> numbers)；
     public static int addUp(Stream<Integer> numbers) {
@@ -27,6 +28,11 @@ public class StreamExerciseA {
     }
 
     // 编写一个函数，接受专辑列表作为参数，返回一个由最多包含3 首歌曲的专辑组成的列表
+    public static List<Track> filterTrack(List<Track> tracks) {
+        return tracks.stream()
+                .filter(track -> track.getLength() <= 3)
+                .collect(Collectors.toList());
+    }
 
 
     public static void main(String[] args) {
@@ -34,6 +40,11 @@ public class StreamExerciseA {
 
         convertArtist(Arrays.asList(new Artist("Nathan", "Shanghai")
                 , new Artist("Winky", "Hangzhou")))
+                .forEach(System.out::println);
+
+        filterTrack(Arrays.asList(new Track("jay", 5),
+                new Track("Fantacy", 2),
+                new Track("Still Fantacy", 8)))
                 .forEach(System.out::println);
 
     }
