@@ -16,4 +16,11 @@ public class Track {
     private String name;
 
     private int length;
+
+    private boolean solo;
+
+    public Track(String name, int length) {
+        this.name = name;
+        this.length = length;
+    }
 }
