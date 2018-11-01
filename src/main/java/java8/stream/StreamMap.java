@@ -22,5 +22,28 @@ public class StreamMap {
                 .collect(Collectors.toList());
 
         together.forEach(System.out::println);
+
+
+        List<ClassStudent> classes = Arrays.asList(new ClassStudent(Arrays.asList("1a", "1b"))
+                , new ClassStudent(Arrays.asList("2a", "2b"))
+                , new ClassStudent(Arrays.asList("3a", "3b")));
+        List<String> allStudents = classes.stream().flatMap(cs -> cs.getStudents().stream()).collect(Collectors.toList());
+        allStudents.forEach(System.out::println);
+    }
+
+    public static class ClassStudent {
+        public ClassStudent(List<String> students) {
+            this.students = students;
+        }
+
+        List<String> students;
+
+        public List<String> getStudents() {
+            return students;
+        }
+
+        public void setStudents(List<String> students) {
+            this.students = students;
+        }
     }
 }
