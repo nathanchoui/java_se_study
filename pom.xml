@@ -29,6 +29,23 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.google.auto.value/auto-value-annotations &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.auto.value</groupId>-->
+            <!--<artifactId>auto-value-annotations</artifactId>-->
+            <!--<version>1.6.6</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.google.auto.value/auto-value &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.auto.value</groupId>-->
+            <!--<artifactId>auto-value</artifactId>-->
+            <!--<version>1.6.6</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+
     </dependencies>
 
 

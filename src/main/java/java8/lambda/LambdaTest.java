@@ -1,5 +1,7 @@
 package java8.lambda;
 
+import java.io.File;
+import java.io.FileFilter;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -27,5 +29,21 @@ public class LambdaTest {
             }
         });
         System.out.println(Arrays.toString(planets));
+
+        /*
+        File[] hiddenFiles = new File(".").listFiles(new FileFilter() {
+            @Override
+            public boolean accept(File file) {
+                return file.isHidden();
+            }
+        });
+        */
+
+        File[] hiddenFiles = new File(".").listFiles(File::isHidden);
+
+
+
+
+
     }
 }
