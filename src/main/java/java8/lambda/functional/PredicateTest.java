@@ -1,4 +1,4 @@
-package java8.lambda.functional.predicate;
+package java8.lambda.functional;
 
 import java8.lambda.functional.model.Fruit;
 

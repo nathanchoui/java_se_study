@@ -13,4 +13,5 @@ public class Fruit {
 
     private int weight = 0;
     private String color = "";
+
 }

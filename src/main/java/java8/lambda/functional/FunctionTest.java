@@ -1,29 +1,24 @@
 package java8.lambda.functional;
 
-import java.util.function.*;
+import java8.lambda.functional.model.Fruit;
+import java8.lambda.functional.model.FruitFactory;
+
+import java.util.function.Function;
 
 /**
- * Description:
- * <p>
- * Created by nathan.z on 2018/9/15.
+ * @author nathan.z
+ * @date 2019/9/27.
  */
 public class FunctionTest {
 
     public static void main(String[] args) {
-        Predicate<Integer> atLeast5 = x -> x > 5;
 
-        Consumer<Integer> consumer = x -> System.out.println(x);
+        Function<Fruit, String> printFruit = (Fruit fruit) -> fruit.getColor() + " extra bling!!!";
 
-        Supplier<String> supplier = () -> "supply a String";
-
-        Function<Integer, Integer> squareF = x -> x * x;
-        Function<Integer, Integer> doubleF = x -> x * 2;
-        System.out.println(squareF.compose(doubleF).apply(10));
-
-        BiFunction<Integer, Integer, Integer> plus = (x, y) -> x + y;
-
-        UnaryOperator<String> echo = x -> x;
-        BinaryOperator<Integer> operatorPlus = (x, y) -> x + y;
-
+        FruitFactory.getFruits().forEach((fruit -> {
+            System.out.println(printFruit.apply(fruit));
+        }));
     }
+
+
 }
