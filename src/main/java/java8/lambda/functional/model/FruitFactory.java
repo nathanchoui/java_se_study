@@ -12,6 +12,9 @@ public class FruitFactory {
     public static List<Fruit> getFruits() {
         return Arrays.asList(new Fruit(12, "blue")
                 , new Fruit(9, "red")
-                , new Fruit(15, "red"));
+                , new Fruit(15, "red")
+                , new Fruit(15, "red")
+                , new Fruit(45, "yellow")
+                , new Fruit(2, "grey"));
     }
 }

@@ -11,7 +11,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Fruit {
 
-    private int weight = 0;
-    private String color = "";
+    private int weight;
+    private String color;
 
 }
